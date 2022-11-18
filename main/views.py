@@ -13,9 +13,9 @@ def register(request):
        sname=request.POST('sname')
        email=request.POST('email')
        password1=request.POST('password')
-       password2=request.POST('password2') 
        user=User.objects.create_user(password=password1,email=email,fname=fname,sname=sname)
        user.save()
        print('user created')
    return render(request,'register.html')
-   
+def index(request):
+    return render(request,"hello django")
