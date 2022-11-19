@@ -6,16 +6,18 @@ from django.shortcuts import redirect, render
 def home(request):
     
     return render(request, "main.html")
-def register(request):
+def signup(request):
     
-   if request.method=='POST':
-       fname=request.POST('fname')
-       sname=request.POST('sname')
-       email=request.POST('email')
-       password1=request.POST('password')
-       user=User.objects.create_user(password=password1,email=email,fname=fname,sname=sname)
-       user.save()
-       print('user created')
-   return render(request,'register.html')
-def index(request):
-    return render(request,"hello django")
+    
+    
+    
+    
+    
+    
+    return render(request,"signup.html")
+def signin(request):
+    return render(request,"signin.html")
+ 
+def signout(request):
+    return render(request,"signout.html")
+ 
